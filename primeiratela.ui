@@ -128,45 +128,11 @@ border-color: white;
      <string>SAIR</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>130</y>
-      <width>201</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-background-color: rgb(250, 216, 255);
-border-radius: 15px; 
-border-style: outset; 
-border-width: 2px;
-border-color: black;
-}
-QPushButton:pressed {
-background-color: rgb(250, 216, 255);
-border-style: outset; 
-border-width: 2px;
-border-radius: 15px; 
-border-color: white;
-}</string>
-    </property>
-    <property name="text">
-     <string>LOGIN</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>200</y>
+      <y>170</y>
       <width>201</width>
       <height>51</height>
      </rect>
@@ -200,7 +166,7 @@ border-color: white;
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>270</y>
+      <y>240</y>
       <width>201</width>
       <height>51</height>
      </rect>
