@@ -4,13 +4,35 @@ from PyQt5 import uic,QtWidgets
 
 import sqlite3
 
+global senha_db
+
+def converte_celtofah():
+    temp = int(telaconversao.lineEdit.text())
+    temp = (temp * 9/5) + 32
+
+    msg = QtWidgets.QMessageBox()
+    msg.setWindowTitle("Sucesso")
+    msg.setText("Resultado: "+str(temp)+"°F")
+    msg.exec()
+
+
+def converte_fahtocel():
+    temp2 = int(telaconversao.lineEdit_2.text())
+    temp2 = (temp2 - 32) * 5/9
+
+    msg = QtWidgets.QMessageBox()
+    msg.setWindowTitle("Sucesso")
+    msg.setText("Resultado: "+str(temp2)+"°C")
+    msg.exec()    
+
 def sair_login():
     tela1login.close()
     primeiratela.show()
 
+   
 def conversao():
     primeiratela.close()
-    telaconversao.show()
+    telaconversao.show()   
 
 def sair_conversao():
     telaconversao.close()
@@ -43,18 +65,22 @@ def chama_primeiratela():
     nome_user = tela1login.lineEdit.text()
     senha = tela1login.lineEdit_2.text()
     banco = sqlite3.connect('banco.db')
+    cursor = banco.cursor()
     try:
-        Cursor.execute("SELECT senha FROM cadastrar_db WHERE login ='{}").format(nome_user)
-        senha_db = Cursor.fetchall()
+        cursor.execute("SELECT senha FROM cadastrar WHERE login = '{}'".format(nome_user))
+        senha_db = cursor.fetchall()
         print(senha_db[0][0])
         banco.close
-    except:
-        print("Erro ao validar login")
+    except: 
+        print("ERRO AO VALIDAR LOGIN")
+
     if senha == senha_db[0][0]:
         tela1login.close()
         primeiratela.show()
+
     else:
         tela1login.label_4.setText("Dados incorretos")
+
 
 def cadastrar():
     tela1login.close()
@@ -76,7 +102,6 @@ def fechar_temp():
     telatempo.close()
     primeiratela.show()
 
-
 def fechar_app():
     tela1login.close()
 
@@ -91,12 +116,15 @@ primeiratela.pushButton_3.clicked.connect(conversao)
 primeiratela.pushButton_4.clicked.connect(abrir_temp)
 primeiratela.pushButton_2.clicked.connect(voltar_login)
 telaconversao.pushButton_2.clicked.connect(sair_conversao)
+telaconversao.pushButton_3.clicked.connect(converte_celtofah)
+telaconversao.pushButton_4.clicked.connect(converte_fahtocel)
 tela1login.pushButton.clicked.connect(chama_primeiratela)
 tela1login.pushButton_2.clicked.connect(cadastrar)
 telacadastro.pushButton.clicked.connect(cadastrar_db)
 telacadastro.pushButton_2.clicked.connect(sair_cadastro)
 tela1login.pushButton_3.clicked.connect(fechar_app)
 telatempo.pushButton_3.clicked.connect(fechar_temp)
+
 
 tela1login.show()
 app.exec()

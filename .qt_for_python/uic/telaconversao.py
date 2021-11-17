@@ -68,48 +68,19 @@ class Ui_MainWindow(object):
 "border-color: white;\n"
 "}")
         self.pushButton_2.setObjectName("pushButton_2")
-        self.comboBox = QtWidgets.QComboBox(self.centralwidget)
-        self.comboBox.setGeometry(QtCore.QRect(90, 140, 111, 41))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.comboBox.setFont(font)
-        self.comboBox.setStyleSheet("background-color: rgb(250, 216, 255);\n"
-"border-style: outset; \n"
-"border-color: black;\n"
-"border-width: 2px;\n"
-"border-width: 2px;")
-        self.comboBox.setObjectName("comboBox")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox_2 = QtWidgets.QComboBox(self.centralwidget)
-        self.comboBox_2.setGeometry(QtCore.QRect(90, 220, 111, 41))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.comboBox_2.setFont(font)
-        self.comboBox_2.setStyleSheet("background-color: rgb(250, 216, 255);\n"
-"border-style: outset; \n"
-"border-color: black;\n"
-"border-width: 2px;\n"
-"border-width: 2px;")
-        self.comboBox_2.setObjectName("comboBox_2")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(210, 140, 251, 41))
+        self.lineEdit.setGeometry(QtCore.QRect(180, 120, 251, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.lineEdit.setFont(font)
         self.lineEdit.setStyleSheet("background-color: rbg(255, 255, 255);\n"
 "border-radius: 15px; \n"
 "border-style: outset; \n"
 "border-width: 2px;")
+        self.lineEdit.setText("")
         self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(210, 220, 251, 41))
-        self.lineEdit_2.setStyleSheet("background-color: rbg(255, 255, 255);\n"
-"border-radius: 15px; \n"
-"border-style: outset; \n"
-"border-width: 2px;")
-        self.lineEdit_2.setObjectName("lineEdit_2")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(230, 280, 121, 41))
+        self.pushButton_3.setGeometry(QtCore.QRect(220, 240, 121, 41))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.pushButton_3.setFont(font)
@@ -129,6 +100,42 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.pushButton_3.setObjectName("pushButton_3")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(80, 320, 391, 61))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label.setFont(font)
+        self.label.setText("")
+        self.label.setObjectName("label")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_2.setGeometry(QtCore.QRect(180, 180, 251, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.lineEdit_2.setFont(font)
+        self.lineEdit_2.setStyleSheet("background-color: rbg(255, 255, 255);\n"
+"border-radius: 15px; \n"
+"border-style: outset; \n"
+"border-width: 2px;")
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(130, 120, 41, 41))
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap("c:\\Users\\rafael\\Desktop\\PROJETINHO\\LOGIN\\c2.png"))
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(130, 180, 41, 41))
+        self.label_3.setText("")
+        self.label_3.setPixmap(QtGui.QPixmap("c:\\Users\\rafael\\Desktop\\PROJETINHO\\LOGIN\\fah2.png"))
+        self.label_3.setObjectName("label_3")
+        self.labeltext0.raise_()
+        self.powerlabel.raise_()
+        self.pushButton_2.raise_()
+        self.pushButton_3.raise_()
+        self.label.raise_()
+        self.lineEdit_2.raise_()
+        self.label_2.raise_()
+        self.label_3.raise_()
+        self.lineEdit.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -140,8 +147,4 @@ class Ui_MainWindow(object):
         self.labeltext0.setText(_translate("MainWindow", "WEATHER FORECAST"))
         self.powerlabel.setText(_translate("MainWindow", "POWERED BY: RAFAEL"))
         self.pushButton_2.setText(_translate("MainWindow", "SAIR"))
-        self.comboBox.setItemText(0, _translate("MainWindow", "CELSIUS"))
-        self.comboBox.setItemText(1, _translate("MainWindow", "FAHRENHEIT"))
-        self.comboBox_2.setItemText(0, _translate("MainWindow", "FAHRENHEIT"))
-        self.comboBox_2.setItemText(1, _translate("MainWindow", "CELSIUS"))
         self.pushButton_3.setText(_translate("MainWindow", "CONFIRMAR"))
